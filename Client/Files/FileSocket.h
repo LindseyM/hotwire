@@ -1,9 +1,7 @@
 #ifndef _FILE_SOCKET_H_
 #define _FILE_SOCKET_H_
 
-#include <wx/file.h>
-#include <wx/string.h>
-#include <wx/wfstrem.h>
+#include <wx/wx.h>
 #include "../Support/BaseProtocol.h"
 #include "ResourceStream.h"
 
@@ -25,7 +23,8 @@ public:
 	virtual void FileSent(wxFile& file) = NULL;
 	virtual void GotPlatform() = NULL;
 	virtual void PacketSizeChanged(unsigned int packetSize) = NULL;
-	virtual void Progress(unsigned short percent, unsigned int speed, unsigned short done, unsigned long total) = NULL;
+	virtual void Progress(unsigned short percent, unsigned int speed, unsigned short done,
+		unsigned long total) = NULL;
 	virtual void QueueStatus(unsigned int LineNum, unsigned short WhichQueue) = NULL;
 	virtual void RawError(int code) = NULL;
 	virtual void TransferError(wxString& message) = NULL;

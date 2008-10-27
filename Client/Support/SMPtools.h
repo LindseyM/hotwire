@@ -1,11 +1,7 @@
 #ifndef _SMPTOOLS_H_
 #define _SMPTOOLS_H_
 
-#include <wx/dir.h>
-#include <wx/file.h>
-#include <wx/image.h>
-#include <wx/string.h>
-#include <wx/window.h>
+#include <wx/wx.h>
 
 #include "ChatlineCore.h"
 

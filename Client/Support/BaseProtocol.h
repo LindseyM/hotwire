@@ -1,8 +1,7 @@
 #ifndef _BASE_PROTOCOL_H_
 #define _BASE_PROTOCOL_H_
 
-#include <wx/socket.h>
-#include <wx/string.h>
+#include <wx/wx.h>
 
 class BaseProtocol: public wxSocketBase
 {

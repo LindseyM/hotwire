@@ -1,9 +1,7 @@
 #ifndef _CONVERSIONS_H_
 #define _CONVERSIONS_H_
 
-#include <wx/colour.h>
-#include <wx/image.h>
-#include <wx/string.h>
+#include <wx/wx.h>
 
 wxString* PictureToString(wxImage& p);
 wxColour* StringToColor(wxString& s);

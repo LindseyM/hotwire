@@ -1,8 +1,7 @@
 #ifndef _WINDOW_TRACKER_H_
 #define _WINDOW_TRACKER_H_
 
-#include <wx/string.h>
-#include <wx/window.h>
+#include <wx/wx.h>
 
 class WindowTracker
 {

@@ -1,7 +1,7 @@
 #ifndef _CONTROLS_H_
 #define _CONTROLS_H_
 
-#include <wx/string.h>
+#include <wx/wx.h>
 #include "WindowTracker.h"
 
 #define BUILD "1B26"

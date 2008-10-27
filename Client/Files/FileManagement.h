@@ -1,8 +1,7 @@
 #ifndef _FILE_MANAGEMENT_H_
 #define _FILE_MANAGEMENT_H_
 
-#include <wx/image.h>
-#include <wx/string.h>
+#include <wx/wx.h>
 #include "TransferItem.h"
 
 unsigned short DLGoing;

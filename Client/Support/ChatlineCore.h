@@ -1,9 +1,7 @@
 #ifndef _CHATLINE_CORE_H_
 #define _CHATLINE_CORE_H_
 
-#include <wx/colour.h>
-#include <wx/image.h>
-#include <wx/string.h>
+#include <wx/wx.h>
 #include "BaseProtocol.h"
 
 struct Privs
@@ -85,12 +83,13 @@ public:
 	virtual void GotIconChange(wxString& sock, short newIcon, bool isCustom, wxString& customData) = NULL;
 	virtual void GotKilledCategory(wxString& catname) = NULL;
 	virtual void GotNameChange(wxString& sock, wxString& newName) = NULL;
-	virtual void GotNewsCategoriesList(wxString& list[], unsigned short count[], bool locked[]) = NULL;
+	virtual void GotNewsCategoriesList(wxString& list[], unsigned short count[],
+		bool locked[]) = NULL;
 	virtual void GotPrivateMsg(wxString& sock, wxString& msg) = NULL;
 	virtual void GotPrivs(Privs& thePrivs) = NULL;
 	virtual void GotServerBanner(wxImage& banner) = NULL;
-	virtual void GotServerInfo(wxString& name, wxString& speed, wxString& location, wxString& description,
-		wxString& version, wxString& uptime) = NULL;
+	virtual void GotServerInfo(wxString& name, wxString& speed, wxString& location,
+		wxString& description, wxString& version, wxString& uptime) = NULL;
 	virtual void GotServerMsg(wxString& msg) = NULL;
 	virtual void GotServerName(wxString& name) = NULL;
 	virtual void GotUserInfo(unsigned short sock, wxString& info) = NULL;
@@ -104,8 +103,8 @@ public:
 	virtual void PrivChat(unsigned short PChatID, wxString& Chat) = NULL;
 	virtual void PutFile(wxString& Path, unsigned short Port, wxString& UID) = NULL;
 	virtual void UnknownCommand(wxString& id, wxString& data) = NULL;
-	virtual void UserJoined(wxString& nick, short icon, unsigned short ID, wxColour& clr, bool iscustom,
-		wxString& custom) = NULL;
+	virtual void UserJoined(wxString& nick, short icon, unsigned short ID, wxColour& clr,
+		bool iscustom, wxString& custom) = NULL;
 	virtual void UserLeft(unsigned short ID) = NULL;
 	
 	wxString* GetAgreementStyl() const						{return mAgreementStyl;}

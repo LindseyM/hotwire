@@ -1,9 +1,7 @@
 #ifndef _ICON_TO_STRING_H_
 #define _ICON_TO_STRING_H_
 
-#include <wx/colour.h>
-#include <wx/image.h>
-#include <wx/string.h>
+#include <wx/wx.h>
 
 wxColour* SysColor[];
 
