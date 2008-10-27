@@ -3,9 +3,9 @@
 
 #include <wx/string.h>
 
-wxString* infonames[];
+wxString* InfoNames[];
 
 void CloseAllInfos();
-void RemoveInfoWindow(wxString* sock);
+void RemoveInfoWindow(wxString& sock);
 
 #endif

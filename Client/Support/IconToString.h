@@ -5,11 +5,11 @@
 #include <wx/image.h>
 #include <wx/string.h>
 
-wxColour* sysColor[];
+wxColour* SysColor[];
 
-wxString* ConvertPicture(wxImage* p, bool newstyle);
-unsigned short GetColorID(wxColour* c);
+wxString* ConvertPicture(wxImage& p, bool newstyle);
+unsigned short GetColorID(wxColour& c);
 void InitSysColorTable();
-wxImage* RemakePicture(wxString* raw, bool newstyle);
+wxImage* RemakePicture(wxString& raw, bool newstyle);
 
 #endif

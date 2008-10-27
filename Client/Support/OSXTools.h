@@ -5,6 +5,6 @@
 #include <wx/string.h>
 
 wxColour* DarkHighlightColor();
-void SetupPrefsMenu(wxString* text, wxString* key);
+void SetupPrefsMenu(wxString& text, wxString& key);
 
 #endif

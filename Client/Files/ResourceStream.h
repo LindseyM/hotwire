@@ -7,8 +7,6 @@
 class ResourceStream
 {
 public:
-	unsigned int RefNum;
-
 	ResourceStream();
 	~ResourceStream();
 
@@ -19,10 +17,15 @@ public:
 	bool IsOpen();
 	wxString* Read(unsigned int bytes);
 	wxString* ReadAll();
-	void SetFile(wxFFile* file);
+	void SetFile(wxFFile& file);
 	void SetLength(unsigned int length);
 	void SetPosition(unsigned int pos);
-	void Write(wxString* data);
+	void Write(wxString& data);
+	
+	unsigned int GetRefNum() const							{return mRefNum;}
+	void SetRefNum(unsigned int n)							{mRefNum = n;}
+private:
+	unsigned int mRefNum;
 };
 
 #endif

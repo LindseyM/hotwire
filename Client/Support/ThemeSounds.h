@@ -3,7 +3,7 @@
 
 #include <wx/string.h>
 
-void DoThemeSound(wxString* q);
+void DoThemeSound(wxString& q);
 wxString* SysVers();
 
 #endif
