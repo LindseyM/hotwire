@@ -1,8 +1,7 @@
 #ifndef _RESOURCE_STREAM_H_
 #define _RESOURCE_STREAM_H_
 
-#include <wx/ffile.h>
-#include <wx/string.h>
+#include <wx/wx.h>
 
 class ResourceStream
 {

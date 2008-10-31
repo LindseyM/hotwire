@@ -2,7 +2,7 @@
 #define _FILE_SOCKET_H_
 
 #include <wx/wx.h>
-#include "../Support/BaseProtocol.h"
+#include "../../shared/BaseProtocol.h"
 #include "ResourceStream.h"
 
 class FileSocket: public BaseProtocol

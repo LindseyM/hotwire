@@ -10,9 +10,11 @@ public:
 	~BaseProtocol();
 
 	void SendCommand(wxString& id, wxString& data);
+	void OnConnected(wxCommandEvent& event);
+	void OnDataAvailable(wxCommandEvent& event);
 
-	virtual void CommandReceived(wxString& id, wxString& data) = NULL;
-	virtual void Connected() = NULL;
+	virtual void CommandReceived(wxString& id, wxString& data, wxCommandEvent& event) = NULL;
+	virtual void Connected(wxCommandEvent& event) = NULL;
 	
 	wxString* GetData() const								{return mData;}
 	void SetData(wxString& s)								{mData = s;}
