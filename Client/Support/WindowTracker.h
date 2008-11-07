@@ -6,19 +6,19 @@
 class WindowTracker
 {
 public:
-	unsigned short mHeight;
-	bool mIsOpen;
-	int mLeft;
-	int mTop;
-	unsigned short mWidth;
+	unsigned short	mHeight;
+	bool			mIsOpen;
+	int				mLeft;
+	int				mTop;
+	unsigned short	mWidth;
 	
 	WindowTracker();
 	~WindowTracker();
 
-	void LoadFromString(wxString& s);
-	void LoadFromWindow(wxWindow& w);
-	void OwnWindow(wxWindow& w);
-	wxString* SaveToString();
+	void			LoadFromString(wxString& s);
+	void			LoadFromWindow(wxWindow& w);
+	void			OwnWindow(wxWindow& w);
+	wxString*		SaveToString();
 };
 
 #endif

@@ -6,16 +6,16 @@
 class ChatWin: public wxFrame
 {
 public:
-	void ResetEntryFieldFormatting();
+	void			ResetEntryFieldFormatting();
 	
-	void OnClose(wxCommandEvent& event);
-	void OnMoved(wxCommandEvent& event);
-	void OnOpen(wxCommandEvent& event);
-	void OnResized(wxCommandEvent& event);
+	void			OnClose(wxCommandEvent& event);
+	void			OnMoved(wxCommandEvent& event);
+	void			OnOpen(wxCommandEvent& event);
+	void			OnResized(wxCommandEvent& event);
 private:
-	wxTextCtrl* mChatFld;
-	wxTextCtrl* mTextFld;
-	wxToolBar* mToolBar;
+	wxTextCtrl*		mChatFld;
+	wxTextCtrl*		mTextFld;
+	wxToolBar*		mToolBar;
 };
 
 #endif
