@@ -48,6 +48,12 @@ struct UserList
 class ChatlineSocket: public BaseProtocol
 {
 public:
+	wxString* mAgreementStyl;
+	bool mGettingServerName;
+	wxString* mLastNickChange;
+	wxString* mServerName;
+	unsigned int mServerVersion;
+	
 	ChatlineSocket();
 	~ChatlineSocket();
 
@@ -109,23 +115,6 @@ public:
 	virtual void UserJoined(wxString& nick, short icon, unsigned short ID, wxColour& clr,
 		bool iscustom, wxString& custom, wxCommandEvent& event) = NULL;
 	virtual void UserLeft(unsigned short ID, wxCommandEvent& event) = NULL;
-	
-	wxString* GetAgreementStyl() const						{return mAgreementStyl;}
-	void SetAgreementStyl(wxString& s)						{mAgreementStyl = s;}
-	bool GetGettingServerName() const						{return mGettingServerName;}
-	void SetGettingServerName(bool b)						{mGettingServerName = b;}
-	wxString* GetLastNickChange() const						{return mLastNickChange;}
-	void SetLastNickChange(wxString& s)						{mLastNickChange = s;}
-	wxString* GetServerName() const							{return mServerName;}
-	void SetServerName(wxString* s)							{mServerName = s;}
-	unsigned int GetServerVersion() const					{return mServerVersion;}
-	void SetServerVersion(unsigned int n)					{mServerVersion = n;}
-private:
-	wxString* mAgreementStyl;
-	bool mGettingServerName;
-	wxString* mLastNickChange;
-	wxString* mServerName;
-	unsigned int mServerVersion;
 };
 
 #endif

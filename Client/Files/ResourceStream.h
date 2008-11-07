@@ -6,6 +6,8 @@
 class ResourceStream
 {
 public:
+	unsigned int mRefNum;
+
 	ResourceStream();
 	~ResourceStream();
 
@@ -20,11 +22,6 @@ public:
 	void SetLength(unsigned int length);
 	void SetPosition(unsigned int pos);
 	void Write(wxString& data);
-	
-	unsigned int GetRefNum() const							{return mRefNum;}
-	void SetRefNum(unsigned int n)							{mRefNum = n;}
-private:
-	unsigned int mRefNum;
 };
 
 #endif
